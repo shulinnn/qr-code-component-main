@@ -1,7 +1,58 @@
+@import "./node_modules/normalize.css/normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
 :root {
   --white: hsl(0, 0%, 100%);
   --lightGray: hsl(212, 45%, 89%);
   --grayishBlue: hsl(220, 15%, 55%);
   --darkBlue: hsl(218, 44%, 22%);
-  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+}
+
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--lightGray);
+}
+
+.card-wrapper {
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: var(--white);
+}
+
+img {
+  width: auto;
+  border-radius: 16px;
+}
+
+h1 {
+  font-size: 24px;
+  padding: 0px 12px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  padding: 0px 16px;
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .card-wrapper {
+    width: 300px;
+    margin: 0 auto;
+  }
 }
